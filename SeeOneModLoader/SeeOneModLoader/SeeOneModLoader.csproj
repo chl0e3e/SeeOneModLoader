@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\**" />
+    <TrimmerRootDescriptor Include="Roots.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersion)" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Gameloop.Vdf" Version="0.6.2" />
+    <PackageReference Include="XamlNameReferenceGenerator" Version="1.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\SelectOutputDirectoryView.axaml.cs">
+      <DependentUpon>SelectOutputDirectoryView.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SelectModsView.axaml.cs">
+      <DependentUpon>SelectModsView.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SelectPatchesView.axaml.cs">
+      <DependentUpon>SelectPatchesView.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SelectGameDirectoryView.axaml.cs">
+      <DependentUpon>SelectGameDirectoryView.axaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\SeeOneModLoader.Patch\SeeOneModLoader.Patch.csproj" />
+  </ItemGroup>
+</Project>

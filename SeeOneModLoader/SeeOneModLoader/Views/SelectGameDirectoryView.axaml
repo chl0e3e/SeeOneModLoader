@@ -1,0 +1,28 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:SeeOneModLoader.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="SeeOneModLoader.Views.SelectGameDirectoryView"
+             Foreground="White"
+             Background="#171C2C">
+	<Design.DataContext>
+		<viewModels:SelectGameDirectoryViewModel />
+	</Design.DataContext>
+	
+	<StackPanel HorizontalAlignment="Left"
+                VerticalAlignment="Top" Margin="20" >
+		<TextBlock FontSize="18" Text="{ Binding Title }" />
+		<CheckBox IsChecked="True" Margin="0,20,0,10" Content="{ Binding UseSteamDir }" Command="{ Binding DoCheckUseSteamCommand }" />
+		<Button Content="{ Binding Browse }" Margin="0,10,0,10" IsVisible="{ Binding CustomDirectoryEnabled }" Command="{ Binding DoBrowseCommand }" />
+		<Button Content="{ Binding TryResolveStr }" IsVisible="{ Binding ErrorAndSteam }" Command="{ Binding DoTryResolve }" />
+
+		<TextBlock FontSize="12" Margin="0,10">
+			<TextBlock Padding="5">
+				<Bold>Path: </Bold>
+			</TextBlock>
+			<TextBlock Background="#1b264a" Foreground="{ Binding PathColour }" Padding="5" Text="{ Binding GameDirectory }"></TextBlock>
+		</TextBlock>
+	</StackPanel>
+</UserControl>

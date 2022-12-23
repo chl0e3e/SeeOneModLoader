@@ -1,0 +1,121 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeeOneModLoader", "SeeOneModLoader\SeeOneModLoader\SeeOneModLoader.csproj", "{4A8CF846-7501-4290-8A99-7939E0BE55F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeeOneModLoader.Desktop", "SeeOneModLoader\SeeOneModLoader.Desktop\SeeOneModLoader.Desktop.csproj", "{C9783A99-5E21-49F5-8CAF-90C34D385B86}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeeOneModLoader.Patch", "SeeOneModLoader.Patch\SeeOneModLoader.Patch.csproj", "{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		net_2_0_Debug|Any CPU = net_2_0_Debug|Any CPU
+		net_2_0_Release|Any CPU = net_2_0_Release|Any CPU
+		net_3_5_Debug|Any CPU = net_3_5_Debug|Any CPU
+		net_3_5_Release|Any CPU = net_3_5_Release|Any CPU
+		net_4_0_Debug|Any CPU = net_4_0_Debug|Any CPU
+		net_4_0_Release|Any CPU = net_4_0_Release|Any CPU
+		net_4_5_Debug|Any CPU = net_4_5_Debug|Any CPU
+		net_4_5_Release|Any CPU = net_4_5_Release|Any CPU
+		Release|Any CPU = Release|Any CPU
+		silverlight_Debug|Any CPU = silverlight_Debug|Any CPU
+		silverlight_Release|Any CPU = silverlight_Release|Any CPU
+		winphone_Debug|Any CPU = winphone_Debug|Any CPU
+		winphone_Release|Any CPU = winphone_Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.net_2_0_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.net_2_0_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.net_2_0_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.net_2_0_Release|Any CPU.Build.0 = Release|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.net_3_5_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.net_3_5_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.net_3_5_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.net_3_5_Release|Any CPU.Build.0 = Release|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.net_4_0_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.net_4_0_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.net_4_0_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.net_4_0_Release|Any CPU.Build.0 = Release|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.net_4_5_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.net_4_5_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.net_4_5_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.net_4_5_Release|Any CPU.Build.0 = Release|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.silverlight_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.silverlight_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.silverlight_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.silverlight_Release|Any CPU.Build.0 = Release|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.winphone_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.winphone_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.winphone_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A8CF846-7501-4290-8A99-7939E0BE55F2}.winphone_Release|Any CPU.Build.0 = Release|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.net_2_0_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.net_2_0_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.net_2_0_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.net_2_0_Release|Any CPU.Build.0 = Release|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.net_3_5_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.net_3_5_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.net_3_5_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.net_3_5_Release|Any CPU.Build.0 = Release|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.net_4_0_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.net_4_0_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.net_4_0_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.net_4_0_Release|Any CPU.Build.0 = Release|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.net_4_5_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.net_4_5_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.net_4_5_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.net_4_5_Release|Any CPU.Build.0 = Release|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.silverlight_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.silverlight_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.silverlight_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.silverlight_Release|Any CPU.Build.0 = Release|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.winphone_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.winphone_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.winphone_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9783A99-5E21-49F5-8CAF-90C34D385B86}.winphone_Release|Any CPU.Build.0 = Release|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.net_2_0_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.net_2_0_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.net_2_0_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.net_2_0_Release|Any CPU.Build.0 = Release|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.net_3_5_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.net_3_5_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.net_3_5_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.net_3_5_Release|Any CPU.Build.0 = Release|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.net_4_0_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.net_4_0_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.net_4_0_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.net_4_0_Release|Any CPU.Build.0 = Release|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.net_4_5_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.net_4_5_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.net_4_5_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.net_4_5_Release|Any CPU.Build.0 = Release|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.silverlight_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.silverlight_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.silverlight_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.silverlight_Release|Any CPU.Build.0 = Release|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.winphone_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.winphone_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.winphone_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0265AC8F-52E9-4D1F-B597-58DA3A2A077A}.winphone_Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18142695-4F84-45A7-B74C-7D594E6F7916}
+	EndGlobalSection
+EndGlobal
