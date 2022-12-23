@@ -1,3 +1,4 @@
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Threading;
 using DynamicData;
@@ -19,6 +20,7 @@ namespace SeeOneModLoader.Views
         private string _stage;
         private int _progress;
         private int _progressMax;
+        private bool _close;
 
         private Mutex mut = new Mutex();
 
@@ -34,10 +36,21 @@ namespace SeeOneModLoader.Views
             this._stage = "Initialised window";
             this._progress = 0;
             this._progressMax = 0;
+            this._close = false;
 
             var timer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(100) };
             timer.Tick += (sender, e) =>
             {
+                if (this._close)
+                {
+                    this.Close();
+                    if (this.MainWindow != null)
+                    {
+                        this.MainWindow.Close();
+                    }
+
+                    return;
+                }
                 mut.WaitOne();
 
                 var stage = this.Get<TextBlock>("Stage");
@@ -123,7 +136,7 @@ namespace SeeOneModLoader.Views
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
                     RedirectStandardError = true,
-                    CreateNoWindow = false,
+                    CreateNoWindow = true,
                     WorkingDirectory = System.IO.Path.GetDirectoryName(path)
                 }
             };
@@ -141,6 +154,7 @@ namespace SeeOneModLoader.Views
             proc.BeginErrorReadLine();
 
             proc.WaitForExit(); //you need this in order to flush the output buffer
+            this._close = true;
         }
 
         private void Proc_ErrorDataReceived(object sender, DataReceivedEventArgs e)
