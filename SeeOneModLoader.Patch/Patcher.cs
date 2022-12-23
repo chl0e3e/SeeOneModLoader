@@ -20,7 +20,7 @@ namespace SeeOneModLoader.Patch
         {
             PATCHES.Add("FNA - SDL", new FNA_SDL_Patch());
             PATCHES.Add("FNA - Remove SlimInput", new FNA_Remove_SlimInput_Patch());
-            PATCHES.Add("FNA - Reoute XNA Guide", new FNA_Reroute_XNA_Guide());
+            PATCHES.Add("FNA - Reroute XNA Guide", new FNA_Reroute_XNA_Guide());
         }
 
         private class CustomResolver : BaseAssemblyResolver

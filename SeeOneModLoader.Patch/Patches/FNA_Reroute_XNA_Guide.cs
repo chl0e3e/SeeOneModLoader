@@ -18,10 +18,6 @@ namespace SeeOneModLoader.Patch.Patches
     {
         private static string NAMESPACE = "BasicXNAProject";
         private static string GAME_CLASS_NAME = "Game1";
-        private static string SLIMINPUTWRAPPER_CLASS_NAME = "SlimInputWrapper";
-        private static string XGUIDE_CLASS_NAME = "XGuide";
-        private static string PATCH_REMOVAL_TYPE_SLIMINPUT_INIT = "Microsoft.Xna.Framework.GameWindow Microsoft.Xna.Framework.Game::get_Window()";
-        private static string PATCH_REMOVAL_TYPE_SLIMINPUT_UPDATE = "System.Void SlimInput.SlimGamePad::Update()";
 
         public void Patch(Patcher patcher, AssemblyDefinition assembly)
         {
