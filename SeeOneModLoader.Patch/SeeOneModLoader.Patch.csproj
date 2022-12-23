@@ -11,9 +11,11 @@
     <PackageReference Include="ILRepack.Lib" Version="2.0.18" />
     <PackageReference Include="Mono.Cecil" Version="0.11.4" />
   </ItemGroup>
-  <ItemGroup>
-    <None Update="$(ProjectDir)Music\**" CopyToOutputDirectory="PreserveNewest" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Update="$(ProjectDir)Music\**" CopyToOutputDirectory="PreserveNewest" />
+		<None Update="$(ProjectDir)XNA\**" CopyToOutputDirectory="PreserveNewest" />
+		<None Update="$(ProjectDir)FNA\**" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
 	
   <ItemGroup>
     <None Update="FAudio.dll">
@@ -29,9 +31,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="libtheorafile.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SDL2.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="XNACommonCrossPlatform.dll">

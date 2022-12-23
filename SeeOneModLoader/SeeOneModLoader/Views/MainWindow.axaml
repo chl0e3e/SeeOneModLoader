@@ -6,6 +6,8 @@
         xmlns:views="clr-namespace:SeeOneModLoader.Views"
         mc:Ignorable="d"
         x:Class="SeeOneModLoader.Views.MainWindow"
+		Width="620"
+		Height="500"
         Icon="/Assets/avalonia-logo.ico"
         Title="SeeOneModLoader">
 	<StackPanel>
@@ -13,20 +15,22 @@
 					FontSize="18">
 			FortressCraft: Chapter 1 (Unofficial Loader)
 		</TextBlock>
-		<TabControl x:Name="LoaderTabs">
-			<TabItem Header="Game Location" VerticalContentAlignment="Center">
-				<views:SelectGameDirectoryView/>
-			</TabItem>
-			<TabItem Header="Patches" VerticalContentAlignment="Center">
-				<views:SelectPatchesView/>
-			</TabItem>
-			<TabItem Header="Output Directory" VerticalContentAlignment="Center">
-				<views:SelectOutputDirectoryView/>
-			</TabItem>
-			<TabItem Header="Mods" VerticalContentAlignment="Center">
-				<views:SelectModsView/>
-			</TabItem>
-		</TabControl>
+		<Grid>
+			<TabControl x:Name="LoaderTabs">
+				<TabItem Header="Game Location" VerticalContentAlignment="Center">
+					<views:SelectGameDirectoryView/>
+				</TabItem>
+				<TabItem Header="Patches" VerticalContentAlignment="Center">
+					<views:SelectPatchesView/>
+				</TabItem>
+				<TabItem Header="Output Directory" VerticalContentAlignment="Center">
+					<views:SelectOutputDirectoryView/>
+				</TabItem>
+				<TabItem Header="Mods" VerticalContentAlignment="Center">
+					<views:SelectModsView/>
+				</TabItem>
+			</TabControl>
+		</Grid>
 		<DockPanel>
 			<Button x:Name="Previous" IsEnabled="false" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10">Previous</Button>
 			<Button x:Name="Next" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10">Next</Button>

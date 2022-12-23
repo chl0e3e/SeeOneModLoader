@@ -20,10 +20,10 @@ namespace SeeOneModLoader.Views
         private int _currentIndex;
         private TabControl _tabs;
 
-        private SelectGameDirectoryViewModel gameDirectoryViewModel;
-        private SelectPatchesViewModel patchesViewModel;
-        private SelectModsViewModel modsViewModel;
-        private SelectOutputDirectoryViewModel outputDirectoryViewModel;
+        public SelectGameDirectoryViewModel GameDirectoryViewModel;
+        public SelectPatchesViewModel PatchesViewModel;
+        public SelectModsViewModel ModsViewModel;
+        public SelectOutputDirectoryViewModel OutputDirectoryViewModel;
 
         public MainWindow()
         {
@@ -41,12 +41,12 @@ namespace SeeOneModLoader.Views
             var previousButton = this.Get<Button>("Previous");
             previousButton.Click += PreviousButton_Click;
 
-            this.gameDirectoryViewModel = new SelectGameDirectoryViewModel();
-            this.patchesViewModel = new SelectPatchesViewModel();
-            this.modsViewModel = new SelectModsViewModel();
-            this.outputDirectoryViewModel = new SelectOutputDirectoryViewModel();
+            this.GameDirectoryViewModel = new SelectGameDirectoryViewModel();
+            this.PatchesViewModel = new SelectPatchesViewModel();
+            this.ModsViewModel = new SelectModsViewModel();
+            this.OutputDirectoryViewModel = new SelectOutputDirectoryViewModel();
 
-            this.DataContext = this.gameDirectoryViewModel;
+            this.DataContext = this.GameDirectoryViewModel;
         }
 
         private void _tabs_SelectionChanged(object? sender, SelectionChangedEventArgs e)
@@ -63,17 +63,17 @@ namespace SeeOneModLoader.Views
             {
                 this.Get<Button>("Previous").IsEnabled = false;
                 this._tabs.SelectedIndex = --_currentIndex;
-                this.DataContext = this.gameDirectoryViewModel;
+                this.DataContext = this.GameDirectoryViewModel;
             }
             else if (tabView is SelectOutputDirectoryView)
             {
                 this._tabs.SelectedIndex = --_currentIndex;
-                this.DataContext = this.patchesViewModel;
+                this.DataContext = this.PatchesViewModel;
             }
             else if (tabView is SelectModsView)
             {
                 this._tabs.SelectedIndex = --_currentIndex;
-                this.DataContext = this.outputDirectoryViewModel;
+                this.DataContext = this.OutputDirectoryViewModel;
                 this.Get<Button>("Next").Content = "Next";
             }
         }
@@ -89,14 +89,14 @@ namespace SeeOneModLoader.Views
                 if (view.CanProceed())
                 {
                     this._tabs.SelectedIndex = ++_currentIndex;
-                    this.DataContext = this.patchesViewModel;
+                    this.DataContext = this.PatchesViewModel;
                     this.Get<Button>("Previous").IsEnabled = true;
                 }
             }
             else if (tabView is SelectPatchesView)
             {
                 this._tabs.SelectedIndex = ++_currentIndex;
-                this.DataContext = this.outputDirectoryViewModel;
+                this.DataContext = this.OutputDirectoryViewModel;
             }
             else if (tabView is SelectOutputDirectoryView)
             {
@@ -104,27 +104,17 @@ namespace SeeOneModLoader.Views
                 if (view.CanProceed())
                 {
                     this._tabs.SelectedIndex = ++_currentIndex;
-                    this.DataContext = this.modsViewModel;
+                    this.DataContext = this.ModsViewModel;
                     this.Get<Button>("Next").Content = "Play";
                 }
             }
             else if (tabView is SelectModsView)
             {
                 System.Console.WriteLine("Launching game");
-                Patcher patcher = new Patcher(this.gameDirectoryViewModel.GameDirectory, this.outputDirectoryViewModel.OutputDirectory);
-
-                List<string> enabledPatches = new List<string>();
-
-                foreach(SelectPatchesViewModel.Patch patch in this.patchesViewModel.Items)
-                {
-                    if (patch.IsChecked)
-                    {
-                        enabledPatches.Add(patch.Name);
-                    }
-                }
-
-                var assembly = patcher.Patch(enabledPatches);
-                patcher.Run(assembly);
+                LogWindow logWindow = new LogWindow();
+                logWindow.MainWindow = this;
+                logWindow.Show();
+                this.Hide();
             }
         }
     }

@@ -1,0 +1,17 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d" Height="450"
+        x:Class="SeeOneModLoader.Views.LogWindow"
+        Title="Log">
+	<Grid Margin="20">
+		<StackPanel>
+			<TextBox x:Name="Log" AcceptsReturn="True" TextWrapping="Wrap" Text="" />
+			<StackPanel>
+				<ProgressBar Margin="0,10,0,10" x:Name="Progress" Value="0" IsIndeterminate="False" Minimum="0" Maximum="100" Height="30"/>
+				<TextBlock Margin="0,10,0,10" x:Name="Stage"></TextBlock>
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+</Window>

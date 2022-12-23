@@ -34,6 +34,9 @@
     <Compile Update="Views\SelectGameDirectoryView.axaml.cs">
       <DependentUpon>SelectGameDirectoryView.axaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\LogWindow.axaml.cs">
+      <DependentUpon>LogWindow.axaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
